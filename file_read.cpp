@@ -1,5 +1,5 @@
 #include "studentas.h"
-#include "header.h"
+#include "main_header.h"
 
 // duomenys nuskaitomi i std::vector
 void readFile(vector<Studentas> &M, int nd, string t, int ap, float (*vid_med)(int, vector<int>&)){

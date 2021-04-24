@@ -1,5 +1,5 @@
 #include "studentas.h"
-#include "header.h"
+#include "main_header.h"
 
 // ieskoma ribos, kuri skiria 'kietiakus' ir 'varguolius'
 bool isLessThan(Studentas &i){

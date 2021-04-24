@@ -1,5 +1,5 @@
 #include "studentas.h"
-#include "header.h"
+#include "main_header.h"
 
 // testuojami veiksmai su tam tikro dydzio studentu sarasu
 void testVector(int ap, string title, int nd, string vm, string arGen){

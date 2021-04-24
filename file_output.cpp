@@ -1,5 +1,5 @@
 #include "studentas.h"
-#include "header.h"
+#include "main_header.h"
 
 // i tekstini faila isvedami rezultatai (vector)
 void outputFile(vector<Studentas> &M, int ap, string title, string league, string vm){

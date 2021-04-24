@@ -1,5 +1,5 @@
-#ifndef HEADER_H
-#define HEADER_H
+#ifndef MAIN_HEADER_H
+#define MAIN_HEADER_H
 
 #include <fstream>
 #include <vector>

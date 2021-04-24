@@ -1,5 +1,5 @@
 #include "studentas.h"
-#include "header.h"
+#include "main_header.h"
 
 // rusiuojami vector elementai naudojant partition
 void partitionStudents(vector<Studentas> &M, vector<Studentas>::iterator &it, int ap){
