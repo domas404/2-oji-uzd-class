@@ -3,3 +3,4 @@ kursiokai/
 varguoliai/
 *.o
 *.exe
+.vscode/
