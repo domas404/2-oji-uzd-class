@@ -28,12 +28,12 @@ void distinctStudents(vector<Studentas> &Kietiakai, int ap, string vm){
 }
 // studentu skirstymas i dvi grupes (kietiakus ir varguolius) (deque)
 void distinctStudents(deque<Studentas> &Kietiakai, int ap, string vm){
+    deque<Studentas>::iterator it;
+    partitionStudents(Kietiakai, it, ap);
     auto pr = chrono::high_resolution_clock::now();
 
     deque<Studentas> Varguoliai;
-    deque<Studentas>::iterator it1;
-    it1 = find_if(Kietiakai.begin(), Kietiakai.end(), isLessThan);
-    Varguoliai.assign(it1, Kietiakai.end());
+    Varguoliai.assign(it, Kietiakai.end());
     Kietiakai.resize(Kietiakai.size()-Varguoliai.size());
 
     auto pab = chrono::high_resolution_clock::now();
@@ -53,12 +53,12 @@ void distinctStudents(deque<Studentas> &Kietiakai, int ap, string vm){
 }
 // studentu skirstymas i dvi grupes (kietiakus ir varguolius) (list)
 void distinctStudents(list<Studentas> &Kietiakai, int ap, string vm){
+    list<Studentas>::iterator it;
+    partitionStudents(Kietiakai, it, ap);
     auto pr = chrono::high_resolution_clock::now();
 
     list<Studentas> Varguoliai;
-    list<Studentas>::iterator it1;
-    it1 = find_if(Kietiakai.begin(), Kietiakai.end(), isLessThan);
-    Varguoliai.assign(it1, Kietiakai.end());
+    Varguoliai.assign(it, Kietiakai.end());
     Kietiakai.resize(Kietiakai.size()-Varguoliai.size());
 
     auto pab = chrono::high_resolution_clock::now();

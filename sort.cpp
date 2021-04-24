@@ -11,6 +11,26 @@ void partitionStudents(vector<Studentas> &M, vector<Studentas>::iterator &it, in
     cout << setw(8) << right << ap << setw(50) << left << " studentu rusiavimas pagal gal. ivert. uztruko: ";
     cout << time_taken << " s" << endl;
 }
+// rusiuojami deque elementai naudojant partition
+void partitionStudents(deque<Studentas> &M, deque<Studentas>::iterator &it, int ap){
+    auto pr = chrono::high_resolution_clock::now();
+    it = partition(M.begin(), M.end(), isLessThan);
+    auto pab = chrono::high_resolution_clock::now();
+    double time_taken = chrono::duration_cast<chrono::nanoseconds>(pab - pr).count();
+    time_taken *= 1e-9;
+    cout << setw(8) << right << ap << setw(50) << left << " studentu rusiavimas pagal gal. ivert. uztruko: ";
+    cout << time_taken << " s" << endl;
+}
+// rusiuojami list elementai naudojant partition
+void partitionStudents(list<Studentas> &M, list<Studentas>::iterator &it, int ap){
+    auto pr = chrono::high_resolution_clock::now();
+    it = partition(M.begin(), M.end(), isLessThan);
+    auto pab = chrono::high_resolution_clock::now();
+    double time_taken = chrono::duration_cast<chrono::nanoseconds>(pab - pr).count();
+    time_taken *= 1e-9;
+    cout << setw(8) << right << ap << setw(50) << left << " studentu rusiavimas pagal gal. ivert. uztruko: ";
+    cout << time_taken << " s" << endl;
+}
 // rusiuojami vector elementai
 void sortStudents(vector<Studentas> &M, int ap){
     auto pr = chrono::high_resolution_clock::now();

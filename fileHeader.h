@@ -10,8 +10,8 @@ void testDeque(int ap, string title, int nd, string vm, string arGen, int strate
 void testList(int ap, string title, int nd, string vm, string arGen, int strategy);
 
 void readFile(vector<Studentas> &M, int nd, string t, int ap, float (*vid_med)(int, vector<int>&));
-void readFile(deque<Studentas> &M, int nd, string t, int ap, float (*vid_med)(int, vector<int>&));
-void readFile(list<Studentas> &M, int nd, string t, int ap, float (*vid_med)(int, vector<int>&));
+// void readFile(deque<Studentas> &M, int nd, string t, int ap, float (*vid_med)(int, vector<int>&));
+// void readFile(list<Studentas> &M, int nd, string t, int ap, float (*vid_med)(int, vector<int>&));
 
 void distinctStudents(vector<Studentas> &Kietiakai, int ap, string vm);
 void distinctStudents(deque<Studentas> &Kietiakai, int ap, string vm);

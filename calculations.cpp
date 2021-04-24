@@ -1,23 +1,19 @@
 #include "header.h"
 #include "fileHeader.h"
 
-// nurodomi rikiavimo kriterijai 
-bool wayToSort(const Studentas &a, const Studentas &b) {
-    return a.final > b.final;    // nurodoma rikiuoti pagal varda didejanciai (abeceles tvarka)
-}
 // ieskoma ribos, kuri skiria 'kietiakus' ir 'varguolius'
 bool isLessThan(Studentas &i){
-    return(i.final >= 5);
+    return(i.getFinal() >= 5);
+}
+// nurodomi rikiavimo kriterijai 
+bool wayToSort(Studentas &a, Studentas &b) {
+    return a.getFinal() > b.getFinal();    // nurodoma rikiuoti pagal varda didejanciai (abeceles tvarka)
 }
 // atsitiktiniu skaiciu generavimo funkcija
 double myRandom(){
     static mt19937 mt(static_cast<long unsigned int>(hrClock::now().time_since_epoch().count()));
     static uniform_int_distribution<int> dist(1, 10);
     return dist(mt);
-}
-// skaiciuojamas galutinis ivertinimas
-float Final(float vid, float egz){
-    return ((vid)*0.4 + (egz*0.6));
 }
 // funkcija, skaiciuojanti ivertinimu mediana
 float Mediana(int nd, vector<int> &ND){

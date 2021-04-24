@@ -16,8 +16,8 @@ void outputFile(vector<Studentas> &M, int ap, string title, string league, strin
         r << "-";
     r << endl;
     for (vector<Studentas>::iterator it = M.begin(); it!=M.end(); ++it){
-        r << setw(p) << left << (*it).vardas << setw(p) << left << (*it).pavarde;
-        r << fixed << setprecision(2) << (*it).final << endl;
+        r << setw(p) << left << (*it).getName() << setw(p) << left << (*it).getLastName();
+        r << fixed << setprecision(2) << (*it).getFinal() << endl;
     }
     r.close();
 
@@ -42,8 +42,8 @@ void outputFile(deque<Studentas> &M, int ap, string title, string league, string
         r << "-";
     r << endl;
     for (deque<Studentas>::iterator it = M.begin(); it!=M.end(); ++it){
-        r << setw(p) << left << (*it).vardas << setw(p) << left << (*it).pavarde;
-        r << fixed << setprecision(2) << (*it).final << endl;
+        r << setw(p) << left << (*it).getName() << setw(p) << left << (*it).getLastName();
+        r << fixed << setprecision(2) << (*it).getFinal() << endl;
     }
     r.close();
 
@@ -68,8 +68,8 @@ void outputFile(list<Studentas> &M, int ap, string title, string league, string 
         r << "-";
     r << endl;
     for (list<Studentas>::iterator it = M.begin(); it!=M.end(); ++it){
-        r << setw(p) << left << (*it).vardas << setw(p) << left << (*it).pavarde;
-        r << fixed << setprecision(2) << (*it).final << endl;
+        r << setw(p) << left << (*it).getName() << setw(p) << left << (*it).getLastName();
+        r << fixed << setprecision(2) << (*it).getFinal() << endl;
     }
     r.close();
 
