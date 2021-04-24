@@ -1,8 +1,8 @@
-#include "header.h"
+#include "studentas.h"
 
 // konstruktorius
-Studentas::Studentas(istringstream& iss){
-    readStudent(iss);
+Studentas::Studentas(istringstream& iss, float (*vid_med)(int, vector<int>&)){
+    readStudent(iss, (*vid_med));
 }
 
 // setter'iai
@@ -27,13 +27,13 @@ float Studentas::getFinal() const{
     return final;
 }
 
-// skaiciuojamas galutinis ivertinimas
+// galutinio ivertinimo skaiciavimas
 float Studentas::Final(float vid, float egz){
     return ((vid)*0.4 + (egz*0.6));
 }
 
 // is eilutes nuskaitomi duomenys
-void Studentas::readStudent(istringstream& iss){
+void Studentas::readStudent(istringstream& iss, float (*vid_med)(int, vector<int>&)){
     int p, egz;
     vector<int> ND;
     float vid=0;
@@ -44,6 +44,6 @@ void Studentas::readStudent(istringstream& iss){
     egz = ND.back();
     ND.pop_back();
     int nd = ND.size();
-    vid = Mediana(nd, ND);
+    vid = (*vid_med)(nd, ND);
     final = Final(vid, egz);
 }

@@ -1,5 +1,5 @@
+#include "studentas.h"
 #include "header.h"
-#include "fileHeader.h"
 
 // funkcija  sugeneruojanti ir irasanti studentu duomenis i tekstini faila
 void generateFile(int n, int nd, string name){

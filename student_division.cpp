@@ -1,5 +1,5 @@
+#include "studentas.h"
 #include "header.h"
-#include "fileHeader.h"
 
 // studentu skirstymas i dvi grupes (kietiakus ir varguolius) (vector)
 void distinctStudents(vector<Studentas> &Kietiakai, int ap, string vm){
