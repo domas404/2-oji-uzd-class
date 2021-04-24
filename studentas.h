@@ -15,16 +15,19 @@ class Studentas {
     private:
         string vardas;
         string pavarde;
-        float final;      // galutinis pazymys
+        float final;
     public:
         Studentas():final(0){};
         Studentas(istringstream& iss, float (*vid_med)(int, vector<int>&));
+        // setter'iai
         void setName(string vardas);
         void setLastName(string pavarde);
         void setFinal(float final);
+        // getter'iai
         string getName() const;
         string getLastName() const;
         float getFinal() const;
+        // kiti metodai
         float Final(float vid, float egz);
         void readStudent(istringstream& iss, float (*vid_med)(int, vector<int>&));
 };
