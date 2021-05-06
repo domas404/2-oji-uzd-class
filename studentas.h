@@ -30,6 +30,10 @@ class Studentas {
         // kiti metodai
         float Final(float vid, float egz);
         void readStudent(istringstream& iss, float (*vid_med)(int, vector<int>&));
+
+        Studentas(const Studentas& stud); // copy konstruktorius
+        Studentas& operator=(const Studentas& stud); // priskyrimo operatorius
+        ~Studentas(){}; // destruktorius
 };
 
 double myRandom();

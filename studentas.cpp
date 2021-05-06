@@ -47,3 +47,18 @@ void Studentas::readStudent(istringstream& iss, float (*vid_med)(int, vector<int
     vid = (*vid_med)(nd, ND);
     final = Final(vid, egz);
 }
+// copy konstruktorius
+Studentas::Studentas(const Studentas& stud){
+    this->vardas = stud.vardas;
+    this->pavarde = stud.pavarde;
+    this->final = stud.final;
+}
+// priskyrimo operatorius
+Studentas& Studentas::operator=(const Studentas& stud){
+    if(this == &stud)
+        return *this;
+    this->vardas = stud.vardas;
+    this->pavarde = stud.pavarde;
+    this->final = stud.final;
+    return *this;
+}
