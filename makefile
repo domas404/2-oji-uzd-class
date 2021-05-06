@@ -9,3 +9,5 @@ fun:
 	student_division.cpp
 	file_generation.cpp
 	file_output.cpp
+clear:
+	del *.o
