@@ -10,14 +10,26 @@
 using namespace std;
 using hrClock = chrono::high_resolution_clock;
 
-//Saugomi studento duomenys
-class Studentas {
-    private:
+// Base class
+class Person {
+    protected:
         string vardas;
         string pavarde;
+    public:
+        Person(string vardas, string pavarde){
+            this->vardas = vardas;
+            this->pavarde = pavarde;
+        }
+};
+
+//Saugomi studento duomenys
+class Studentas: public Person {
+    protected:
+        // string vardas;
+        // string pavarde;
         float final;
     public:
-        Studentas():final(0){};
+        //Studentas():final(0){};
         Studentas(istringstream& iss, float (*vid_med)(int, vector<int>&));
         // setter'iai
         void setName(string vardas);
