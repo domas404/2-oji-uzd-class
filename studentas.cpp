@@ -21,7 +21,7 @@ string Studentas::getName() const{
     return vardas;
 }
 string Studentas::getLastName() const{
-    return vardas;
+    return pavarde;
 }
 float Studentas::getFinal() const{
     return final;

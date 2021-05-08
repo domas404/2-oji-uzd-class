@@ -10,27 +10,30 @@
 using namespace std;
 using hrClock = chrono::high_resolution_clock;
 
-// Base class
+// Base klasė
 class Person {
     protected:
         string vardas;
         string pavarde;
     public:
-        Person(string vardas, string pavarde){
-            this->vardas = vardas;
-            this->pavarde = pavarde;
-        }
+        virtual void setName(string vardas) = 0;
+        virtual void setLastName(string pavarde) = 0;
+        string getName() const;
+        string getLastName() const;
 };
 
-//Saugomi studento duomenys
+// Studento klasė
 class Studentas: public Person {
-    protected:
-        // string vardas;
-        // string pavarde;
+    private:
         float final;
     public:
-        //Studentas():final(0){};
+        Studentas():final(0){};
         Studentas(istringstream& iss, float (*vid_med)(int, vector<int>&));
+
+        Studentas(const Studentas& stud); // copy konstruktorius
+        Studentas& operator=(const Studentas& stud); // priskyrimo operatorius
+        ~Studentas(){}; // destruktorius
+
         // setter'iai
         void setName(string vardas);
         void setLastName(string pavarde);
@@ -42,10 +45,6 @@ class Studentas: public Person {
         // kiti metodai
         float Final(float vid, float egz);
         void readStudent(istringstream& iss, float (*vid_med)(int, vector<int>&));
-
-        Studentas(const Studentas& stud); // copy konstruktorius
-        Studentas& operator=(const Studentas& stud); // priskyrimo operatorius
-        ~Studentas(){}; // destruktorius
 };
 
 double myRandom();
