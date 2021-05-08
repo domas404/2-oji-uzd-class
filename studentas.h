@@ -22,7 +22,7 @@ class Person {
         string getLastName() const;
 };
 
-// Studento klasė
+// Studento derived klasė
 class Studentas: public Person {
     private:
         float final;
