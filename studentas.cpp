@@ -12,8 +12,8 @@ void Studentas::setName(string vardas){
 void Studentas::setLastName(string pavarde){
     this->pavarde = pavarde;
 }
-void Studentas::setFinal(float final){
-    this->final = final;
+void Studentas::setFinal(float finalGrade){
+    this->finalGrade = finalGrade;
 }
 
 // getter'iai
@@ -24,7 +24,7 @@ string Studentas::getLastName() const{
     return pavarde;
 }
 float Studentas::getFinal() const{
-    return final;
+    return finalGrade;
 }
 
 // galutinio ivertinimo skaiciavimas
@@ -45,13 +45,13 @@ void Studentas::readStudent(istringstream& iss, float (*vid_med)(int, vector<int
     ND.pop_back();
     int nd = ND.size();
     vid = (*vid_med)(nd, ND);
-    final = Final(vid, egz);
+    finalGrade = Final(vid, egz);
 }
 // copy konstruktorius
 Studentas::Studentas(const Studentas& stud){
     this->vardas = stud.vardas;
     this->pavarde = stud.pavarde;
-    this->final = stud.final;
+    this->finalGrade = stud.finalGrade;
 }
 // priskyrimo operatorius
 Studentas& Studentas::operator=(const Studentas& stud){
@@ -59,6 +59,6 @@ Studentas& Studentas::operator=(const Studentas& stud){
         return *this;
     this->vardas = stud.vardas;
     this->pavarde = stud.pavarde;
-    this->final = stud.final;
+    this->finalGrade = stud.finalGrade;
     return *this;
 }

@@ -25,9 +25,9 @@ class Person {
 // Studento derived klasė
 class Studentas: public Person {
     private:
-        float final;
+        float finalGrade;
     public:
-        Studentas():final(0){};
+        Studentas():finalGrade(0){};
         Studentas(istringstream& iss, float (*vid_med)(int, vector<int>&));
 
         Studentas(const Studentas& stud); // copy konstruktorius
@@ -37,7 +37,7 @@ class Studentas: public Person {
         // setter'iai
         void setName(string vardas);
         void setLastName(string pavarde);
-        void setFinal(float final);
+        void setFinal(float finalGrade);
         // getter'iai
         string getName() const;
         string getLastName() const;
