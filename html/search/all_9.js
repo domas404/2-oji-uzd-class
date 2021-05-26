@@ -1,7 +1,0 @@
-var searchData=
-[
-  ['readfile_22',['readFile',['../file__read_8cpp.html#a2c22520a3c0a15ebaed730c918be4be2',1,'readFile(vector&lt; Studentas &gt; &amp;M, int nd, string t, int ap, float(*vid_med)(int, vector&lt; int &gt; &amp;)):&#160;file_read.cpp'],['../file__read_8cpp.html#a963497cde90865aa2d3dd7b49d37ebab',1,'readFile(deque&lt; Studentas &gt; &amp;M, int nd, string t, int ap, float(*vid_med)(int, vector&lt; int &gt; &amp;)):&#160;file_read.cpp'],['../file__read_8cpp.html#a10f7f68078071e63aa0f7992bf8c03c3',1,'readFile(list&lt; Studentas &gt; &amp;M, int nd, string t, int ap, float(*vid_med)(int, vector&lt; int &gt; &amp;)):&#160;file_read.cpp'],['../main__header_8h.html#a2c22520a3c0a15ebaed730c918be4be2',1,'readFile(vector&lt; Studentas &gt; &amp;M, int nd, string t, int ap, float(*vid_med)(int, vector&lt; int &gt; &amp;)):&#160;file_read.cpp'],['../main__header_8h.html#a963497cde90865aa2d3dd7b49d37ebab',1,'readFile(deque&lt; Studentas &gt; &amp;M, int nd, string t, int ap, float(*vid_med)(int, vector&lt; int &gt; &amp;)):&#160;file_read.cpp'],['../main__header_8h.html#a10f7f68078071e63aa0f7992bf8c03c3',1,'readFile(list&lt; Studentas &gt; &amp;M, int nd, string t, int ap, float(*vid_med)(int, vector&lt; int &gt; &amp;)):&#160;file_read.cpp']]],
-  ['readme_23',['README',['../md__r_e_a_d_m_e.html',1,'']]],
-  ['readme_2emd_24',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
-  ['readstudent_25',['readStudent',['../class_studentas.html#aab5be2d5275fda253d9410d7e9ad9667',1,'Studentas']]]
-];
